@@ -1,0 +1,814 @@
+EESchema Schematic File Version 4
+LIBS:Tarjeta de potencia con moc-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Tarjeta de potencia - optocoplada"
+Date "2018-09-04"
+Rev ""
+Comp "Firux"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay_SolidState:MOC3021M U1
+U 1 1 5B8C4603
+P 2950 1250
+F 0 "U1" H 2950 1450 50  0000 C CNN
+F 1 "MOC3021M" H 2950 1050 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2750 1050 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 2925 1250 50  0001 L CNN
+	1    2950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B8C46DC
+P 2300 1150
+F 0 "R1" V 2200 1150 50  0000 C CNN
+F 1 "10K" V 2400 1150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 1150 50  0001 C CNN
+F 3 "~" H 2300 1150 50  0001 C CNN
+	1    2300 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5B8C475B
+P 3600 1150
+F 0 "R6" V 3500 1150 50  0000 C CNN
+F 1 "10K" V 3700 1150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 1150 50  0001 C CNN
+F 3 "~" H 3600 1150 50  0001 C CNN
+	1    3600 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_ALT D1
+U 1 1 5B8C48AB
+P 2000 1450
+F 0 "D1" V 2038 1332 50  0000 R CNN
+F 1 "LED" V 1947 1332 50  0000 R CNN
+F 2 "LEDs:LED_D3.0mm" H 2000 1450 50  0001 C CNN
+F 3 "~" H 2000 1450 50  0001 C CNN
+	1    2000 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TRIAC:Q7015L5 U6
+U 1 1 5B8EEDDD
+P 4500 1350
+F 0 "U6" H 4478 1771 50  0000 L CNN
+F 1 "Q7015L5" H 4478 1680 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 4250 1900 50  0001 C CNN
+F 3 "https://www.digchip.com/datasheets/download_datasheet.php?id=7451189&part-number=Q7015L5" H 4250 1900 50  0001 C CNN
+	1    4500 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1150 2650 1150
+Wire Wire Line
+	3750 1150 3850 1150
+Wire Wire Line
+	2150 1150 2000 1150
+Wire Wire Line
+	2000 1150 2000 1300
+Wire Wire Line
+	4250 700  3350 700 
+Wire Wire Line
+	3350 1350 3250 1350
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5B8F50DE
+P 1550 1100
+F 0 "J1" H 1550 900 50  0000 C CNN
+F 1 "Linea" H 1550 1200 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1550 1100 50  0001 C CNN
+F 3 "~" H 1550 1100 50  0001 C CNN
+	1    1550 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5B8F51D2
+P 5000 1100
+F 0 "J6" V 5100 1100 50  0000 R CNN
+F 1 "Linea" V 5000 900 50  0000 R CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 5000 1100 50  0001 C CNN
+F 3 "~" H 5000 1100 50  0001 C CNN
+	1    5000 1100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 1300 4250 1250
+$Comp
+L power:GND #PWR0101
+U 1 1 5B8F57BE
+P 1750 1250
+F 0 "#PWR0101" H 1750 1000 50  0001 C CNN
+F 1 "GND" H 1755 1077 50  0000 C CNN
+F 2 "" H 1750 1250 50  0001 C CNN
+F 3 "" H 1750 1250 50  0001 C CNN
+	1    1750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5B8F5804
+P 2000 1700
+F 0 "#PWR0102" H 2000 1450 50  0001 C CNN
+F 1 "GND" H 2005 1527 50  0000 C CNN
+F 2 "" H 2000 1700 50  0001 C CNN
+F 3 "" H 2000 1700 50  0001 C CNN
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5B8F581D
+P 2600 1550
+F 0 "#PWR0103" H 2600 1300 50  0001 C CNN
+F 1 "GND" H 2605 1377 50  0000 C CNN
+F 2 "" H 2600 1550 50  0001 C CNN
+F 3 "" H 2600 1550 50  0001 C CNN
+	1    2600 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1100 1750 1250
+Wire Wire Line
+	2000 1600 2000 1700
+Wire Wire Line
+	2600 1550 2600 1350
+Wire Wire Line
+	2600 1350 2650 1350
+Wire Wire Line
+	3250 1150 3450 1150
+Wire Wire Line
+	3350 700  3350 1350
+Wire Wire Line
+	4250 1300 5000 1300
+Connection ~ 2000 1150
+Wire Wire Line
+	2000 1000 2000 1150
+Wire Wire Line
+	1750 1000 2000 1000
+$Comp
+L Relay_SolidState:MOC3021M U2
+U 1 1 5B8F7F37
+P 2950 2500
+F 0 "U2" H 2950 2700 50  0000 C CNN
+F 1 "MOC3021M" H 2950 2300 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2750 2300 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 2925 2500 50  0001 L CNN
+	1    2950 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5B8F7F3E
+P 2300 2400
+F 0 "R2" V 2200 2400 50  0000 C CNN
+F 1 "10K" V 2400 2400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 2400 50  0001 C CNN
+F 3 "~" H 2300 2400 50  0001 C CNN
+	1    2300 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5B8F7F45
+P 3600 2400
+F 0 "R7" V 3500 2400 50  0000 C CNN
+F 1 "10K" V 3700 2400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 2400 50  0001 C CNN
+F 3 "~" H 3600 2400 50  0001 C CNN
+	1    3600 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_ALT D2
+U 1 1 5B8F7F4C
+P 2000 2700
+F 0 "D2" V 2038 2582 50  0000 R CNN
+F 1 "LED" V 1947 2582 50  0000 R CNN
+F 2 "LEDs:LED_D3.0mm" H 2000 2700 50  0001 C CNN
+F 3 "~" H 2000 2700 50  0001 C CNN
+	1    2000 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TRIAC:Q7015L5 U7
+U 1 1 5B8F7F53
+P 4500 2600
+F 0 "U7" H 4478 3021 50  0000 L CNN
+F 1 "Q7015L5" H 4478 2930 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 4250 3150 50  0001 C CNN
+F 3 "https://www.digchip.com/datasheets/download_datasheet.php?id=7451189&part-number=Q7015L5" H 4250 3150 50  0001 C CNN
+	1    4500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2400 2650 2400
+Wire Wire Line
+	3750 2400 3850 2400
+Wire Wire Line
+	2150 2400 2000 2400
+Wire Wire Line
+	2000 2400 2000 2550
+Wire Wire Line
+	4250 1950 3800 1950
+Wire Wire Line
+	3350 2600 3250 2600
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5B8F7F60
+P 1550 2350
+F 0 "J2" H 1550 2150 50  0000 C CNN
+F 1 "Linea" H 1550 2450 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1550 2350 50  0001 C CNN
+F 3 "~" H 1550 2350 50  0001 C CNN
+	1    1550 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5B8F7F67
+P 5000 2350
+F 0 "J7" V 5100 2350 50  0000 R CNN
+F 1 "Linea" V 5000 2200 50  0000 R CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 5000 2350 50  0001 C CNN
+F 3 "~" H 5000 2350 50  0001 C CNN
+	1    5000 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 2550 4250 2500
+$Comp
+L power:GND #PWR0104
+U 1 1 5B8F7F6F
+P 1750 2500
+F 0 "#PWR0104" H 1750 2250 50  0001 C CNN
+F 1 "GND" H 1755 2327 50  0000 C CNN
+F 2 "" H 1750 2500 50  0001 C CNN
+F 3 "" H 1750 2500 50  0001 C CNN
+	1    1750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5B8F7F75
+P 2000 2950
+F 0 "#PWR0105" H 2000 2700 50  0001 C CNN
+F 1 "GND" H 2005 2777 50  0000 C CNN
+F 2 "" H 2000 2950 50  0001 C CNN
+F 3 "" H 2000 2950 50  0001 C CNN
+	1    2000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5B8F7F7B
+P 2600 2800
+F 0 "#PWR0106" H 2600 2550 50  0001 C CNN
+F 1 "GND" H 2605 2627 50  0000 C CNN
+F 2 "" H 2600 2800 50  0001 C CNN
+F 3 "" H 2600 2800 50  0001 C CNN
+	1    2600 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2350 1750 2500
+Wire Wire Line
+	2000 2850 2000 2950
+Wire Wire Line
+	2600 2800 2600 2600
+Wire Wire Line
+	2600 2600 2650 2600
+Wire Wire Line
+	3250 2400 3450 2400
+Wire Wire Line
+	3350 1950 3350 2600
+Wire Wire Line
+	4250 2550 5000 2550
+Connection ~ 2000 2400
+Wire Wire Line
+	2000 2250 2000 2400
+Wire Wire Line
+	1750 2250 2000 2250
+$Comp
+L Relay_SolidState:MOC3021M U3
+U 1 1 5B8F8507
+P 2950 3750
+F 0 "U3" H 2950 3950 50  0000 C CNN
+F 1 "MOC3021M" H 2950 3550 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2750 3550 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 2925 3750 50  0001 L CNN
+	1    2950 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5B8F850E
+P 2300 3650
+F 0 "R3" V 2200 3650 50  0000 C CNN
+F 1 "10K" V 2400 3650 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 3650 50  0001 C CNN
+F 3 "~" H 2300 3650 50  0001 C CNN
+	1    2300 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5B8F8515
+P 3600 3650
+F 0 "R8" V 3500 3650 50  0000 C CNN
+F 1 "10K" V 3700 3650 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 3650 50  0001 C CNN
+F 3 "~" H 3600 3650 50  0001 C CNN
+	1    3600 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_ALT D3
+U 1 1 5B8F851C
+P 2000 3950
+F 0 "D3" V 2038 3832 50  0000 R CNN
+F 1 "LED" V 1947 3832 50  0000 R CNN
+F 2 "LEDs:LED_D3.0mm" H 2000 3950 50  0001 C CNN
+F 3 "~" H 2000 3950 50  0001 C CNN
+	1    2000 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TRIAC:Q7015L5 U8
+U 1 1 5B8F8523
+P 4500 3850
+F 0 "U8" H 4478 4271 50  0000 L CNN
+F 1 "Q7015L5" H 4478 4180 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 4250 4400 50  0001 C CNN
+F 3 "https://www.digchip.com/datasheets/download_datasheet.php?id=7451189&part-number=Q7015L5" H 4250 4400 50  0001 C CNN
+	1    4500 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3650 2650 3650
+Wire Wire Line
+	3750 3650 3850 3650
+Wire Wire Line
+	2150 3650 2000 3650
+Wire Wire Line
+	2000 3650 2000 3800
+Wire Wire Line
+	4250 3200 3800 3200
+Wire Wire Line
+	3350 3850 3250 3850
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5B8F8530
+P 1550 3600
+F 0 "J3" H 1550 3400 50  0000 C CNN
+F 1 "Linea" H 1550 3700 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1550 3600 50  0001 C CNN
+F 3 "~" H 1550 3600 50  0001 C CNN
+	1    1550 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 5B8F8537
+P 5000 3600
+F 0 "J8" V 5100 3600 50  0000 R CNN
+F 1 "Linea" V 5000 3450 50  0000 R CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 5000 3600 50  0001 C CNN
+F 3 "~" H 5000 3600 50  0001 C CNN
+	1    5000 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 3800 4250 3750
+$Comp
+L power:GND #PWR0107
+U 1 1 5B8F853F
+P 1750 3750
+F 0 "#PWR0107" H 1750 3500 50  0001 C CNN
+F 1 "GND" H 1755 3577 50  0000 C CNN
+F 2 "" H 1750 3750 50  0001 C CNN
+F 3 "" H 1750 3750 50  0001 C CNN
+	1    1750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5B8F8545
+P 2000 4200
+F 0 "#PWR0108" H 2000 3950 50  0001 C CNN
+F 1 "GND" H 2005 4027 50  0000 C CNN
+F 2 "" H 2000 4200 50  0001 C CNN
+F 3 "" H 2000 4200 50  0001 C CNN
+	1    2000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5B8F854B
+P 2600 4050
+F 0 "#PWR0109" H 2600 3800 50  0001 C CNN
+F 1 "GND" H 2605 3877 50  0000 C CNN
+F 2 "" H 2600 4050 50  0001 C CNN
+F 3 "" H 2600 4050 50  0001 C CNN
+	1    2600 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3600 1750 3750
+Wire Wire Line
+	2000 4100 2000 4200
+Wire Wire Line
+	2600 4050 2600 3850
+Wire Wire Line
+	2600 3850 2650 3850
+Wire Wire Line
+	3250 3650 3450 3650
+Wire Wire Line
+	3350 3200 3350 3850
+Wire Wire Line
+	4250 3800 5000 3800
+Connection ~ 2000 3650
+Wire Wire Line
+	2000 3500 2000 3650
+Wire Wire Line
+	1750 3500 2000 3500
+$Comp
+L Relay_SolidState:MOC3021M U4
+U 1 1 5B8F922D
+P 2950 4950
+F 0 "U4" H 2950 5150 50  0000 C CNN
+F 1 "MOC3021M" H 2950 4750 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2750 4750 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 2925 4950 50  0001 L CNN
+	1    2950 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5B8F9234
+P 2300 4850
+F 0 "R4" V 2200 4850 50  0000 C CNN
+F 1 "10K" V 2400 4850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 4850 50  0001 C CNN
+F 3 "~" H 2300 4850 50  0001 C CNN
+	1    2300 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5B8F923B
+P 3600 4850
+F 0 "R9" V 3500 4850 50  0000 C CNN
+F 1 "10K" V 3700 4850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 4850 50  0001 C CNN
+F 3 "~" H 3600 4850 50  0001 C CNN
+	1    3600 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_ALT D4
+U 1 1 5B8F9242
+P 2000 5150
+F 0 "D4" V 2038 5032 50  0000 R CNN
+F 1 "LED" V 1947 5032 50  0000 R CNN
+F 2 "LEDs:LED_D3.0mm" H 2000 5150 50  0001 C CNN
+F 3 "~" H 2000 5150 50  0001 C CNN
+	1    2000 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TRIAC:Q7015L5 U9
+U 1 1 5B8F9249
+P 4500 5050
+F 0 "U9" H 4478 5471 50  0000 L CNN
+F 1 "Q7015L5" H 4478 5380 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 4250 5600 50  0001 C CNN
+F 3 "https://www.digchip.com/datasheets/download_datasheet.php?id=7451189&part-number=Q7015L5" H 4250 5600 50  0001 C CNN
+	1    4500 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4850 2650 4850
+Wire Wire Line
+	3750 4850 3850 4850
+Wire Wire Line
+	2150 4850 2000 4850
+Wire Wire Line
+	2000 4850 2000 5000
+Wire Wire Line
+	4250 4400 3800 4400
+Wire Wire Line
+	3350 5050 3250 5050
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5B8F9256
+P 1550 4800
+F 0 "J4" H 1550 4600 50  0000 C CNN
+F 1 "Linea" H 1550 4900 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1550 4800 50  0001 C CNN
+F 3 "~" H 1550 4800 50  0001 C CNN
+	1    1550 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 5B8F925D
+P 5000 4800
+F 0 "J9" V 5100 4800 50  0000 R CNN
+F 1 "Linea" V 5000 4650 50  0000 R CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 5000 4800 50  0001 C CNN
+F 3 "~" H 5000 4800 50  0001 C CNN
+	1    5000 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 5000 4250 4950
+$Comp
+L power:GND #PWR0110
+U 1 1 5B8F9265
+P 1750 4950
+F 0 "#PWR0110" H 1750 4700 50  0001 C CNN
+F 1 "GND" H 1755 4777 50  0000 C CNN
+F 2 "" H 1750 4950 50  0001 C CNN
+F 3 "" H 1750 4950 50  0001 C CNN
+	1    1750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5B8F926B
+P 2000 5400
+F 0 "#PWR0111" H 2000 5150 50  0001 C CNN
+F 1 "GND" H 2005 5227 50  0000 C CNN
+F 2 "" H 2000 5400 50  0001 C CNN
+F 3 "" H 2000 5400 50  0001 C CNN
+	1    2000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5B8F9271
+P 2600 5250
+F 0 "#PWR0112" H 2600 5000 50  0001 C CNN
+F 1 "GND" H 2605 5077 50  0000 C CNN
+F 2 "" H 2600 5250 50  0001 C CNN
+F 3 "" H 2600 5250 50  0001 C CNN
+	1    2600 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 4800 1750 4950
+Wire Wire Line
+	2000 5300 2000 5400
+Wire Wire Line
+	2600 5250 2600 5050
+Wire Wire Line
+	2600 5050 2650 5050
+Wire Wire Line
+	3250 4850 3450 4850
+Wire Wire Line
+	3350 4400 3350 5050
+Wire Wire Line
+	4250 5000 5000 5000
+Connection ~ 2000 4850
+Wire Wire Line
+	2000 4700 2000 4850
+Wire Wire Line
+	1750 4700 2000 4700
+$Comp
+L Relay_SolidState:MOC3021M U5
+U 1 1 5B8FA83F
+P 2950 6200
+F 0 "U5" H 2950 6400 50  0000 C CNN
+F 1 "MOC3021M" H 2950 6000 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2750 6000 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 2925 6200 50  0001 L CNN
+	1    2950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5B8FA846
+P 2300 6100
+F 0 "R5" V 2200 6100 50  0000 C CNN
+F 1 "10K" V 2400 6100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 6100 50  0001 C CNN
+F 3 "~" H 2300 6100 50  0001 C CNN
+	1    2300 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5B8FA84D
+P 3600 6100
+F 0 "R10" V 3500 6100 50  0000 C CNN
+F 1 "10K" V 3700 6100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 6100 50  0001 C CNN
+F 3 "~" H 3600 6100 50  0001 C CNN
+	1    3600 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_ALT D5
+U 1 1 5B8FA854
+P 2000 6400
+F 0 "D5" V 2038 6282 50  0000 R CNN
+F 1 "LED" V 1947 6282 50  0000 R CNN
+F 2 "LEDs:LED_D3.0mm" H 2000 6400 50  0001 C CNN
+F 3 "~" H 2000 6400 50  0001 C CNN
+	1    2000 6400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TRIAC:Q7015L5 U10
+U 1 1 5B8FA85B
+P 4500 6300
+F 0 "U10" H 4478 6721 50  0000 L CNN
+F 1 "Q7015L5" H 4478 6630 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 4250 6850 50  0001 C CNN
+F 3 "https://www.digchip.com/datasheets/download_datasheet.php?id=7451189&part-number=Q7015L5" H 4250 6850 50  0001 C CNN
+	1    4500 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6100 2650 6100
+Wire Wire Line
+	3750 6100 3850 6100
+Wire Wire Line
+	2150 6100 2000 6100
+Wire Wire Line
+	2000 6100 2000 6250
+Wire Wire Line
+	4250 5650 3800 5650
+Wire Wire Line
+	3350 6300 3250 6300
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5B8FA868
+P 1550 6050
+F 0 "J5" H 1550 5850 50  0000 C CNN
+F 1 "Linea" H 1550 6150 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1550 6050 50  0001 C CNN
+F 3 "~" H 1550 6050 50  0001 C CNN
+	1    1550 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 5B8FA86F
+P 5000 6050
+F 0 "J10" V 5100 6050 50  0000 R CNN
+F 1 "Linea" V 5000 5900 50  0000 R CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 5000 6050 50  0001 C CNN
+F 3 "~" H 5000 6050 50  0001 C CNN
+	1    5000 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 6250 4250 6200
+$Comp
+L power:GND #PWR0113
+U 1 1 5B8FA877
+P 1750 6200
+F 0 "#PWR0113" H 1750 5950 50  0001 C CNN
+F 1 "GND" H 1755 6027 50  0000 C CNN
+F 2 "" H 1750 6200 50  0001 C CNN
+F 3 "" H 1750 6200 50  0001 C CNN
+	1    1750 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5B8FA87D
+P 2000 6650
+F 0 "#PWR0114" H 2000 6400 50  0001 C CNN
+F 1 "GND" H 2005 6477 50  0000 C CNN
+F 2 "" H 2000 6650 50  0001 C CNN
+F 3 "" H 2000 6650 50  0001 C CNN
+	1    2000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5B8FA883
+P 2600 6500
+F 0 "#PWR0115" H 2600 6250 50  0001 C CNN
+F 1 "GND" H 2605 6327 50  0000 C CNN
+F 2 "" H 2600 6500 50  0001 C CNN
+F 3 "" H 2600 6500 50  0001 C CNN
+	1    2600 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6050 1750 6200
+Wire Wire Line
+	2000 6550 2000 6650
+Wire Wire Line
+	2600 6500 2600 6300
+Wire Wire Line
+	2600 6300 2650 6300
+Wire Wire Line
+	3250 6100 3450 6100
+Wire Wire Line
+	3350 5650 3350 6300
+Wire Wire Line
+	4250 6250 5000 6250
+Connection ~ 2000 6100
+Wire Wire Line
+	2000 5950 2000 6100
+Wire Wire Line
+	1750 5950 2000 5950
+$Comp
+L Connector_Generic:Conn_01x02 J11
+U 1 1 5B902837
+P 5550 6600
+F 0 "J11" H 5500 6700 50  0000 L CNN
+F 1 "Linea" H 5450 6400 50  0000 L CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 5550 6600 50  0001 C CNN
+F 3 "~" H 5550 6600 50  0001 C CNN
+	1    5550 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1350 3800 1350
+Wire Wire Line
+	3800 1350 3800 1950
+Connection ~ 3350 1350
+Connection ~ 3800 1950
+Wire Wire Line
+	3800 1950 3350 1950
+Wire Wire Line
+	5100 1300 5350 1300
+Wire Wire Line
+	5350 1300 5350 2550
+Wire Wire Line
+	5350 2550 5100 2550
+Wire Wire Line
+	3350 2600 3800 2600
+Wire Wire Line
+	3800 2600 3800 3200
+Connection ~ 3350 2600
+Connection ~ 3800 3200
+Wire Wire Line
+	3800 3200 3350 3200
+Wire Wire Line
+	5350 2550 5350 3800
+Wire Wire Line
+	5350 3800 5100 3800
+Connection ~ 5350 2550
+Wire Wire Line
+	3350 3850 3800 3850
+Wire Wire Line
+	3800 3850 3800 4400
+Connection ~ 3350 3850
+Connection ~ 3800 4400
+Wire Wire Line
+	3800 4400 3350 4400
+Wire Wire Line
+	5350 3800 5350 5000
+Wire Wire Line
+	5350 5000 5100 5000
+Connection ~ 5350 3800
+Wire Wire Line
+	3350 5050 3800 5050
+Wire Wire Line
+	3800 5050 3800 5650
+Connection ~ 3350 5050
+Connection ~ 3800 5650
+Wire Wire Line
+	3800 5650 3350 5650
+Wire Wire Line
+	5350 5000 5350 6250
+Wire Wire Line
+	5350 6250 5100 6250
+Connection ~ 5350 5000
+Wire Wire Line
+	5350 6600 5350 6250
+Connection ~ 5350 6250
+Wire Wire Line
+	3800 6700 3800 6300
+Wire Wire Line
+	3800 6300 3350 6300
+Connection ~ 3350 6300
+Wire Wire Line
+	3800 6700 5350 6700
+Text Notes 5650 6600 0    50   ~ 0
+Fase
+Text Notes 5650 6750 0    50   ~ 0
+Neutro\n
+Text Notes 1100 1100 0    50   ~ 0
+Señal de\nactivación
+Text Notes 4950 900  0    50   ~ 0
+Carga AC
+$EndSCHEMATC

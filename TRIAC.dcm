@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Q7015L5
+D TRIAC (it(RMS)=15A, Vdm=700V, lgt=500mA)
+F https://www.digchip.com/datasheets/download_datasheet.php?id=7451189&part-number=Q7015L5
+$ENDCMP
+#
+#End Doc Library
